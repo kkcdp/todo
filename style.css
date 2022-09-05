@@ -1,0 +1,265 @@
+
+
+
+:root {
+    box-sizing: border-box;
+} */
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0px;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* TODO: Fonti visā lapā - kurš un izmērs. Pogām cits? */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    display: inline-flex;
+    background-color:rgb(238, 236, 161);
+    justify-content: space-between;
+    
+    padding: 1em;
+    padding-right: 1em;
+    border-bottom: solid black 0.02em;
+    width: 100%;
+    
+}
+
+.dropdown-menu {
+    background-color:  rgb(238, 236, 161);
+}
+
+.dropdown-menu:hover {
+        background-color:rgb(238, 236, 161);
+}
+
+
+/* TODO: Dropdown. Krāsa aktivajai rindai kad hover un uzspiež uz to
+
+.dropdown-menu>.active>a {
+    background-color:rgb(20, 60, 102);
+    color: rgb(238, 236, 161);;
+} */
+
+.btn-header {
+        background-color: transparent;
+        border: none;
+}
+
+/* .btn-header:hover {
+    
+} */
+
+#btn-home:hover {
+    background-color: red;
+}
+
+.btn-left-menu {
+    min-width: 150px;
+    background-color: rgb(20, 60, 102);
+    color: rgb(238, 236, 161);
+    border: 1px solid black;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 6px;
+    margin-top: 20px;
+} 
+
+.btn-left-menu:hover{
+    background-color: rgb(213, 214, 255);
+    color: black;
+}
+
+.row {
+    /* min-height: 480px; */
+    background-color: rgb(238, 236, 161);
+}
+
+.left-sidebar{
+    display: flex;
+    flex-direction: column;
+    flex: 0.6;
+    background-color: rgb(238, 236, 161);
+    justify-content:flex-start;
+    align-items:center;
+    min-width: 180px;
+}
+
+.main-tile {
+    flex: 2;
+    background-image: url("/pic1.JPG");   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* parallax */
+} 
+
+.main-tile > p {
+    text-align: left;
+    text-indent: 50px;
+    margin: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.right-sidebar{
+    flex: 0.7;
+    background-color: rgb(238, 236, 161);
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+.right-sidebar-box {
+    border: solid black 0.02em;
+    margin: 10px;
+    padding: 10px;
+    background-color: lightgrey;
+    /* justify-content:center;
+    align-items:center; */
+    text-align: center;
+}
+
+footer {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: rgb(238, 236, 161);
+    border-top: solid black 0.02em; 
+}
+
+    @media (max-width: 800px) {
+        .container {
+            flex-direction: column;         
+            text-align: center;
+        } 
+
+        .row {
+            flex-direction: column;       
+            text-align: center;
+            min-height: 350px;
+        }
+        
+        .left-sidebar { 
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+            align-items:center;
+         } 
+
+         .btn-left-menu {
+            min-width: 60%;
+            margin-top: 16px;
+       }
+        
+        .main-tile    {
+            display: none;
+          }
+        }
+      /* ******************* */
+      /* LOGIN PAGE */
+      /* ******************* */
+
+      .form-frame {
+        display: block;
+        padding: 20px;
+        margin: 20px 0px;
+        width: 320px;
+        min-height: 280px;
+        border: solid black 0.02em;
+        background-color: rgb(238, 236, 161);
+        
+      }
+            
+      .form-group {
+        font-size: 16px;
+        max-width: 250px;
+      }
+
+      input[type=email]:focus, input[type=password]:focus {
+        background-color: rgb(198, 198, 198);
+        outline: solid black 0.02em;
+      }
+      
+
+      #right-sidebar-form {
+        display: flex;
+        background-image: url("/pic2.JPG");
+        /* background-color: rgb(213, 214, 255); */
+        justify-content: center;
+        min-height: 380px;
+      }
+
+      .form-frame h3 {
+        text-transform: uppercase;
+        margin: 0px;
+        font-size: 0.9em;
+        font-weight: bold;
+        text-align: right;
+      }
+
+      /* **********************************
+      TODO PAGE 
+      *********************************** */
+
+      .todo-row {
+        display: flex;
+        flex-direction: row;
+      }
+      
+      #row-todo-head {
+        display:inline-flex;
+        border-bottom: rgb(151, 149, 149) solid 0.02em;
+        height: 55px;
+        align-content:center;
+        justify-content: center;
+        background-color: transparent;
+      }
+      .todo-left-column {
+        flex: 0.7;
+        background-color: beige;
+        min-height: 300px;
+        padding: 16px;
+      }
+
+      .badge-warning {
+        background-color: rgb(20, 60, 102);
+    }
+
+    
+
+    .btn-warning {
+        min-width: 80px;
+    }
+
+      .todo-right-column {
+        
+        flex: 2.2;
+        background-color: bisque;
+        min-height: 300px;
+        padding: 16px;
+      }  
+
+       @media (max-width: 800px) {
+          .todo-row {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+      
